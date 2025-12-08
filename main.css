@@ -1,1 +1,29 @@
+/*
+declaration blocks: 
 
+selector{
+    property: value;
+    property2: value;
+}
+*/
+
+body{
+    backgound-color: rgb (19, 19, 83);
+    color: whitesmoke;
+}
+
+nav{
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+}
+
+#
+  
