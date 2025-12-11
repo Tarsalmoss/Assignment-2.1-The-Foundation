@@ -1,32 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <!-- This sets the title of the web page -->
     <title>Ian's First Webpage</title>
-    <!-- add a link to our css file -->
+
+    <!-- Using a Google Font just to make the page look nicer -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+
+    <!-- Linking to my CSS file so all the styling is separate -->
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+    <!-- Main header for the page -->
     <header>
         <h1>Welcome to Ian's Page</h1>
     </header>
 
+    <!-- Navigation menu so users can click between pages -->
     <nav>
         <h2>Navigation</h2>
         <a href="./index.html">Home</a><br>
         <a href="./board.html">Boards</a><br>
     </nav>
 
+    <!-- Just a simple intro paragraph -->
     <p>This is my first paragraph for this webpage so yeah.</p>
 
-    <!-- Start and Stop Buttons -->
-    <button id="startBtn">Start</button>
-    <button id="stopBtn">Stop</button>
+    <!--
+        FORM REQUIREMENT:
+        The Start and Stop buttons must be inside a form and use submit.
+        The form returns false so the page doesn't reload.
+    -->
+    <form id="controlForm" onsubmit="return false;">
 
+        <!-- Start button that calls my JS function -->
+        <button id="startBtn" type="submit" onclick="handleStartClick()">Start</button>
+
+        <!-- Stop button that calls the other JS function -->
+        <button id="stopBtn" type="submit" onclick="handleStopClick()">Stop</button>
+
+    </form>
+
+    <!-- This is where I put messages instead of using alerts -->
+    <div id="messageBox"></div>
+
+    <!-- The meme picture that will move around the page -->
     <p>
-        <img id="memeImage" src="Ben10Meme.jpg" style="position:absolute; width:200px;">
+        <img id="memeImage" src="Ben10Meme.jpg" alt="Ben 10 Meme">
     </p>
 
+    <!-- Footer with my school info -->
     <footer>
         Ian Andalon<br>
         University of Advancing Technology<br>
@@ -34,8 +58,7 @@
         Tempe, AZ 85283<br>
     </footer>
 
-    <!-- Link to JavaScript -->
+    <!-- Linking to my JavaScript file -->
     <script src="script.js"></script>
-
 </body>
 </html>
